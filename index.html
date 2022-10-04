@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="../src/styles.css">
     <title>Getting Started</title>
-    <script src="https://unpkg.com/lodash@4.17.20"></script>
 </head>
 
 <body>
@@ -12,10 +12,22 @@
     <div class="container">
         <form class="weather-form" id="location-form">
             <label for="location">Please type your location:</label>
-            <input type="text" name="location" placeholder="Example: London">
+            <input type="text" name="location" placeholder="Example: London" id="location-input">
         </form>
 
         <div class="weather-data">
+            <h2>London</h2>
+            <div class="weather-data__icon">
+                <div class="icon">
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="rain-icon">
+                </div>
+                <p class="main-temp">30<span>º</span></p>
+                <p class="description">Rain</p>
+            </div>
+            <div class="weather-data__temperature">
+                <p class="min-temp"><span>MIN</span>20<span>º</span></p>
+                <p class="max-temp"><span>MAX</span>31<span>º</span></p>
+            </div>
 
         </div>
     </div>
