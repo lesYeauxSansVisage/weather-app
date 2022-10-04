@@ -1,1 +1,0 @@
-(async a=>{const e=await fetch("https://api.openweathermap.org/data/2.5/weather?q=maranguape&appid=b3d6abbbc5cc818b36dae477dd8ac490"),t=await e.json();console.log(t)})();
