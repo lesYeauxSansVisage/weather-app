@@ -8,7 +8,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(20, 20, 20);
+
   color: #fff;
 
   min-height: 100vh;
@@ -43,7 +43,7 @@ body::before {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
 }
 
@@ -60,6 +60,8 @@ body::before {
   border: none;
   padding: 10px 20px;
   border-radius: 50px;
+  width: 80%;
+  max-width: 300px;
 }
 
 .weather-form input::placeholder {
@@ -73,7 +75,7 @@ body::before {
 }
 
 .weather-data {
-  background-color: rgb(34, 34, 34);
+  background-color: rgba(34, 34, 34, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +91,13 @@ body::before {
 .weather-data__temperature {
   display: flex;
   gap: 1rem;
+}
+
+.weather-data__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .weather-data__icon .icon {
@@ -114,4 +123,29 @@ body::before {
 
 .weather-data__temperature p span {
   color: rgb(46, 105, 139);
+}
+
+.loading-screen {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(97, 97, 97, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(0);
+
+  transition: transform 0.4s ease-in;
+}
+
+.loading-screen img {
+  height: 64px;
+}
+
+.loading-screen.active {
+  transform: scale(1);
 }
